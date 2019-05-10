@@ -9,6 +9,6 @@ RUN apt-get update && \
 COPY ddclient /etc/default/ddclient
 COPY ddclient.conf /etc/ddclient.conf
 COPY entrypoint.sh /opt/entrypoint.sh
-COPY chmod +x /opt/entrypoint.sh
+RUN chmod +x /opt/entrypoint.sh
 
 ENTRYPOINT  ["/opt/entrypoint.sh"]
